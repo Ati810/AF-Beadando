@@ -74,12 +74,14 @@ A program célja egy olyan, főként játékosoknak szánt alkalmazás biztosít
   - Játékok törlése a kedvencek közül
 - Megvásárolt játékok értékelése
 
+![Eset diagram](docs/images/Smith Games - Hammer eset diagram.png "Eset diagram")
 
 Vegyünk példának egy egyszerű folyamatot:
 
-**Játék vásárlása, majd a kedvencekhez adása:**
+**Játék vásárlása:**
   1. A látogató az oldalra érkezve bejelentkezik, vagy ha még nincs felhasználói fiókja, akkor regisztrál.
   2. A belépés után megtekinthetjük a játékok listáját, s kiválaszthatjuk, hogy melyeket szeretnénk megvásárolni.
   3. A megvásárolni kívánt játékokat a kosárba helyezhetjük, s folytathatjuk a böngészést, vagy továbbléphetünk a fizetéshez.
   4. A játékok kifizetése után azok bekerülnek a saját játékaink közé.
-  5. Az általunk birtokolt játékokat a "Kedvencek közé" gombra kattintva elhelyezhetjük a Kedvencek listánkba.
+  
+![Folyamat leíró eset diagram](docs/images/Smith Games - Hammer folyamat leíró eset diagram.png "Folyamat leíró eset diagram")

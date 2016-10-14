@@ -8,9 +8,9 @@ Készítette: Kovács Attila
 
 #### 1.1 Célkitűzés, projektindító dokumentum
 
-A program célja egy olyan, főként játékosoknak szánt alkalmazás biztosítása, melyen keresztül a felhasználók egyszerűen böngészhetnek a különböző játékok között, azokat megvásárolhatják, hozzászólásokat írhatnak hozzájuk és értékelhetik azokat. Az alkalmazás teljeskörű használata regisztrációhoz kötött. Belépés után lehetőségünk van profilunk megtekintéséhez, ahol láthatjuk alapvető adatainkat, eddigi vásárlásainkat, hozzászólásainkat, s lehetőségünk van új játékok vásárlására, valamint értékelésére. A regisztrálatlan látogatóknak megtekinthetik az egyes játékokat, s az ott megjelenő értékeléseket.
+A program célja egy olyan, főként játékosoknak szánt alkalmazás biztosítása, melyen keresztül a felhasználók egyszerűen böngészhetnek a különböző játékok között, megvásárolhatják, valamint értékelhetik azokat. Az alkalmazás teljeskörű használata regisztrációhoz kötött. Belépés után lehetőségünk van profilunk megtekintéséhez, ahol láthatjuk alapvető adatainkat, eddigi vásárlásainkat, hozzászólásainkat, s lehetőségünk van új játékok vásárlására, azok értékelésére, s kedvencekhez tételére. A regisztrálatlan látogatók megtekinthetik az egyes játékokat, s az ott megjelenő értékeléseket.
 
-###### Funkcionális követelmények:
+###### Funkcionális követelmények
 
 - Regisztráció
 - Bejelentkezés
@@ -19,20 +19,20 @@ A program célja egy olyan, főként játékosoknak szánt alkalmazás biztosít
     - alapvető adatok
     - eddig vásárolt játékaink
     - játékaink kedvencekhez tétele
-    - eddigi hozzászólásaink
+    - eddigi értékeléseink
   - Játékok vásárlása
   - Általunk megvásárolt játékok értékelése
 - Nem regisztrált felhasználók által elérhető funkciók:
   - A megvehető játékok listájának megtekintése
   - Az egyes játékok adatlapjának megtekintése, ahol láthatjuk az ide tartozó értékeléseket is
 
-###### Nem funkcionális követelmények:
+###### Nem funkcionális követelmények
 
 - Könnyű áttekinthetőség 
   - A játékok áttekinthető listában való megjelenítése, kategória címkékkel ellátva
   - A felhasználói profilban az adatok elkülönített, rendezett megjelenítése
 - Használhatóság 
-  - Könnyű áttekinthetőség, ésszerű elrendezés, könnyen kezelhetőség
+  - Könnyű áttekinthetőség, ésszerű elrendezés, könnyű kezelhetőség
 - Megbízhatóság
   - Jelszóval védett funkciók, és a jelszavak védelme a háttérben
   - Hibásan bevitt adatok esetén a program jól láthatóan jelezzen a felhasználónak, és emelje ki a hibás beviteli mezőket
@@ -44,7 +44,7 @@ A program célja egy olyan, főként játékosoknak szánt alkalmazás biztosít
 
 #### 1.2 Szakterületi fogalomjegyzék
 
-###### Kategória címkék:
+###### Kategória címkék
 
 - **Action**: akció játékok
 - **Adventure**: kaland játékok

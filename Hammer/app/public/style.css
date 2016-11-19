@@ -1,0 +1,1164 @@
+/*------------------------------------------------ Minden oldalon jelenlevo elemek*/
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: rgb(39,43,48);
+    height: 100%;
+    min-height: 100%;
+}
+
+.Button{
+    text-decoration: none;
+    color: black;
+    background: rgb(160, 160, 160);
+    border-radius: 5px;
+    border: 2px solid rgb(117, 71, 44);
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.75);
+    padding: 0.5em 1em 0.5em 1em;
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.Button:hover{
+    background: rgb(190, 190, 190);
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.75);
+}
+/*--------------------------- Nav fejlec*/
+nav{
+    width: 99.5%;
+    height: 3em;
+    position: fixed;
+    margin-left: 0.25%;
+    left: 0;
+    top: 0.15em;
+    background: #3a3f44;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+    color: rgb(188,188,188);
+    z-index: 30;
+}
+
+nav > div{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+nav > div:first-of-type{
+    float: left;
+}
+
+nav > div:last-of-type{
+    float: right;
+}
+
+#Nav-icon{
+    width: 36px;
+    margin-top: 0.35em;
+    cursor: pointer;
+}
+
+nav > div > div{
+    height: 100%;
+    padding: 0 1em 0 1em;
+    display: inline-block;
+    line-height: 3em;
+}
+
+nav span{
+    background: rgb(188,188,188);
+    width: 0.1em;
+    height: 0.75em;
+    margin-top: 1.15em;
+}
+
+
+nav button{
+    padding: 0 1em 0 1em;
+    border: none;
+    background: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(188,188,188);
+    font-size: 16px;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+}
+
+nav button:hover{
+    background: black;
+    color: white;
+}
+
+.Nav-LinkButton{
+    display: inline-block;
+    padding: 0.95em 1em 0 1em;
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(188,188,188);
+    font-size: 16px;
+}
+
+.Nav-LinkButton:hover{
+    background: black;
+    color: white;
+}
+
+nav div:last-of-type > a > img{
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+}
+
+#Nav-dropDown{
+    display: none; /*block*/
+    width: 7em;
+    height: 33em;
+    background: #3a3f44;
+    line-height: 2.5em;
+    float: right;
+    margin-top: 3em;
+    margin-left: -5.15em;
+    padding: 0;
+    border: 3px solid #3a3f44;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+#Nav-dropDown a{
+    display: block;
+    padding: 0.25em 0 0.25em 0.5em;
+    text-decoration: none;
+    color: rgb(188,188,188);
+}
+
+#Nav-dropDown a:hover{
+    background: rgb(39,43,48);
+    color: white;
+}
+
+/*--------------------------- Review*/
+.ReviewC{
+    width: 90%;
+    min-height: 7em;
+    padding: 1.5em;
+    margin: auto;
+    margin-top: 1em;
+    background: #3a3f44;
+    border-radius: 0.3em;
+}
+
+.ReviewC:after {    /*Hogy ne essen ossze a teljes container*/
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.ReviewC > div{
+    display: inline-block;
+    background: darkgray;
+}
+
+.ReviewC > div:first-of-type{
+    width: 7em;
+    height: 7em;
+    float: left;
+    border: 5px solid rgb(117, 71, 44);
+    border-radius: 5px;
+}
+
+#Main-BottomC > .ReviewC > div:first-of-type{   /*Csak a fo oldalon kicsit arrebb rakjuk a kep es nev tarolojat*/
+    margin-left: 1em;
+}
+
+.ReviewC > div:first-of-type > img{
+    width: 4em;
+    display: block;
+    margin: auto;
+    margin-top: 0.5em;
+}
+
+.ReviewC > div:first-of-type > span{
+    display: block;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.ReviewC > div:last-of-type{
+    width: 70%;
+    padding-bottom: 1em;
+    border-radius: 5px;
+    float: right;
+    color: rgb(200,200,200);
+}
+
+.ReviewC > div:last-of-type > div:first-of-type{
+    height: 2.25em;
+    width: 100%;
+    background: dimgray;
+    border-radius: 2px 2px 0 0;
+}
+
+.ReviewC > div:last-of-type > div:first-of-type span{
+    display: block;
+    margin-top: 0.35em;
+    padding-left: 1em;
+    font-size: 20px;
+    float: left;
+}
+
+.ReviewC > div:last-of-type > div:first-of-type > div{
+    display: inline-block;
+    float: right;
+}
+
+.ReviewC > div:last-of-type > div:first-of-type > div > img{
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    margin-top: 0.15em
+}
+
+.ReviewC > div:last-of-type > div:last-of-type{
+    width: 90%;
+    margin: auto;
+    margin-top: 1em;
+    background: dimgray;
+    text-align: justify;
+    overflow: auto;
+}
+
+.ReviewC > div:last-of-type > div:last-of-type > span:first-of-type{
+    display: block;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+}
+
+.ReviewC > div:last-of-type > div:last-of-type > span:last-of-type{
+    margin: -1em 1.5em 1em 1.5em;
+    display: block;
+}
+
+.Review-WithoutName{
+    margin-top: 1em!important;
+}
+
+/*--------------------------- Lábléc*/
+footer{
+    width: 100%;
+    height: 7em;
+    overflow: auto;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.75);
+    color: rgb(188,188,188);
+    text-align: center;
+}
+
+#Footer-NoContent{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+footer > img{
+    display: block;
+    width: 3em;
+    margin: auto;
+    margin-top: 1em;
+}
+
+footer > span{
+    display: block;
+    margin: auto;
+}
+/*------------------------------------------------------*/
+
+/*------------------------------------------------ Main*/
+#Main-C{
+    width: 60em;
+    margin: auto;
+    margin-top: 5em;
+    padding: 1em;
+}
+
+#Main-C > div{
+    margin: auto;
+    margin-top: 2em;
+}
+
+#Main-TopC > h1{
+    display: block;
+    font-size: 80px;
+    text-align: center;
+}
+
+#Main-TopC > img{
+    display: block;
+    margin: auto;
+    z-index: -5;
+}
+
+#Main-MidC{
+    width: 95%;
+    background: grey;
+    height: 30em;
+    border-radius: 1em;
+    box-shadow: 0 0 32px 5px rgba(0,0,0,0.75);
+}
+
+#Main-MidC > div{
+    display: inline-block;
+    width: 89.475%;
+    height: 90%;
+    margin: auto;
+    margin-top: 1.5em;
+    background: black;
+    border-radius: 0.5em;
+    box-shadow: 0 0 16px 2px rgba(0,0,0,0.75);
+}
+
+.Main-MidArrows{
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    margin-top: 13em;
+}
+
+#Main-MidLeft{
+    float: left;
+    background: rgba(0,0,0,0.75) url(misc/img/icons/arrow-left.png) 0 0/3em 3em no-repeat;
+}
+
+#Main-MidLeft:hover{
+    background: rgba(0,0,0,0.75) url(misc/img/icons/arrow-leftHover.png) 0 0/3em 3em no-repeat;
+}
+
+#Main-MidRight{
+    float: right;
+    background: rgba(0,0,0,0.75) url(misc/img/icons/arrow-right.png) 0 0/3em 3em no-repeat;
+}
+
+#Main-MidRight:hover{
+    background: rgba(0,0,0,0.75) url(misc/img/icons/arrow-rightHover.png) 0 0/3em 3em no-repeat;
+}
+
+#Main-BottomC{
+    width: 70%;
+    background: grey;
+    padding: 1em;
+    padding-bottom: 2em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 32px 5px rgba(0,0,0,0.75);
+}
+/*------------------------------------------------------*/
+
+/*------------------------------------------------ Login*/
+#Login-C{
+    width: 45em;
+    height: 25em;
+    margin: auto;
+    margin-top: 10em;
+    background: grey;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 32px 5px rgba(0,0,0,0.75);
+}
+
+#Login-C > form, #Login-C > div{
+    width: 45%;
+    height: 100%;
+    background: rgb(220,220,220);
+}
+
+#Login-C > form{
+    border-radius: 5px 0 0 5px;
+}
+
+#Login-C > div{
+    border-radius: 0 5px 5px 0;
+}
+
+#Login-C h1{
+    margin-left: 0.5em;
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+}
+
+#Login-C > form{
+    float: left;
+}
+
+#Login-C > form > input{
+    display: block;
+    margin: auto;
+    margin-top: 0.5em;
+}
+
+#Login-C > form > label{
+    display: block;
+    margin-left: 3em;
+    margin-top: 1em;
+}
+
+#Login-C > form > div{
+    width: 10em;
+    margin: auto;
+    text-align: center;
+}
+
+#Login-EText{
+    box-shadow: 0 0 10px 2px rgba(255,0,0,0.75);
+    border: 2px solid red;
+}
+
+#Login-PText{
+    box-shadow: 0 0 10px 2px rgba(65,195,45,0.75);
+    border: 2px solid rgba(65,195,45,0.75);
+}
+
+#Login-C button{
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+}
+
+#Login-C > span{
+    display: block;
+    width: 0.5em;
+    height: 80%;
+    background: #3a3f44;
+    float: left;
+    margin-left: 2em;
+    margin-top: 2.25em;
+}
+
+#Login-C > div:last-of-type{
+    float: right;
+}
+
+#Login-C > div:last-of-type > span{
+    width: 80%;
+    display: block;
+    margin: auto;
+    text-align: justify;
+}
+
+#Login-C > div:last-of-type > a{
+    width: 10em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    margin-top: 2em;
+    padding: 0.5em;
+    color: black;
+    background: rgb(160, 160, 160);
+    border-radius: 5px;
+    border: 2px solid rgb(117, 71, 44);
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.75);
+}
+
+#Login-C > div:last-of-type > a:hover{
+    background: rgb(190, 190, 190);
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.75);
+}
+/*------------------------------------------------------*/
+
+/*------------------------------------------------ Register*/
+#Register-C{
+    width: 40em;
+    height: 25em;
+    margin: auto;
+    margin-top: 10em;
+    padding: 1em;
+    background: gray;
+    border-radius: 1em;
+    box-shadow: 0 0 32px 5px rgba(0,0,0,0.75);
+}
+
+#Register-C > form{
+    width: 40em;
+    min-height: 100%;
+    margin: auto;
+    background: rgb(220,220,220);
+    border-radius: 0.5em;
+}
+
+#Register-C > form > h1{
+    display: block;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    margin: 0;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+}
+
+#Register-C > form > label{
+    width: 8em;
+    text-align: right;
+    clear: both;
+    float: left;
+    margin-top: 1em;
+    margin-left: 25%;
+}
+
+#Register-C > form > input{
+    width: 13em;
+    display: block;
+    float: right;
+    margin-right: 25%;
+    margin-top: 1em;
+}
+
+.Register-Error{
+    box-shadow: 0 0 10px 2px rgba(255,0,0,0.75);
+}
+
+#Register-C > form > div{
+    width: 10em;
+    margin: auto;
+    margin-top: -3em;
+}
+
+#Register-C > form > div > button:first-of-type{
+    display: block;
+    margin: auto;
+    margin-top: 3em;
+}
+
+#Register-Submit{
+    display: block;
+    margin-left: 20em;
+    margin-top: 3em;
+    float: left;
+}
+
+.Register-Info{
+    display: none;
+    margin-left: 23em;
+}
+/*------------------------------------------------------*/
+
+/*------------------------------------------------ Cart*/
+#Cart-C{
+    width: 60em;
+    margin: auto;
+    margin-top: 10em;
+    background: gray;
+    border-radius: 0.5em;
+    box-shadow: 0 0 32px 5px rgba(0,0,0,0.75);
+}
+
+#Cart-C > div:first-of-type, #Cart-Mid{
+    width: 100%;
+}
+
+#Cart-C > div:first-of-type{
+    background: gainsboro;
+}
+
+#Cart-C > div:first-of-type > h1{
+    margin: 0;
+    padding: 0.5em;
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+}
+
+#Cart-Mid{
+    padding-bottom: 1em;
+}
+
+#Cart-Mid a{
+    text-decoration: none;
+    color: black;
+}
+
+#Cart-Mid > div{
+    background: darkgray;
+    margin-bottom: 0.5em;
+}
+
+#Cart-Mid > div > *{
+    display: inline-block;
+}
+
+#Cart-Mid > div > div > a > img{
+    width: 12.5em;
+    padding: 0.8em 0.5em 0.5em 0.8em;
+}
+
+#Cart-Mid > div > div:nth-child(2) > a{
+    float: left;
+    padding-bottom: 3.15em;
+    font-size: 24px;
+}
+
+#Cart-Mid > div > div:nth-child(3){
+    width: 4em;
+    float: right;
+    margin-top: 2.5em;
+    margin-right: 5.25em;
+    font-size: 20px;
+}
+
+#Cart-Mid > div > div:nth-child(3) > span{
+    float: right;
+}
+
+#Cart-Mid > div > form{
+    width: 4em;
+    float: right;
+    margin-top: 2.75em;
+    margin-right: -10.2em;
+}
+
+#Cart-Mid > div > form > button{
+    display: block;
+    background: rgba(255, 0, 0, 0.45);
+    color: gainsboro;
+    font-size: 12px;
+    font-weight: bold;
+    margin: auto;
+}
+
+/*Ha ures*/
+#Cart-Mid > h3{
+    display: block;
+    margin-left: 40%;
+}
+
+#Cart-Out{
+    float: right;
+    /*background: gainsboro;*/
+    margin-top: -1.5em;
+    margin-right: 1em;
+    font-size: 16px;
+}
+
+#Cart-Out > span{
+    width: 3em;
+    display: inline-block;
+    padding: 0.85em;
+    text-align: center;
+    background: gainsboro;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.75);
+}
+
+#Cart-Out > form{
+    display: inline-block;
+}
+
+#Cart-Out > form > button{
+    padding: 0.75em 1.4em;
+    font-size: 16px;
+    margin-top: -0.1em;
+    background: darkseagreen;
+    border: 2px solid darkgreen;
+}
+
+#Cart-Out > a{
+    padding: 0.8em 1em;
+    font-size: 16px;
+}
+
+#Cart-Out > a:hover, #Cart-Out > form > button:hover{
+    box-shadow: inset 0 0 15px 0 rgba(0,0,0,0.75);
+}
+/*------------------------------------------------------*/
+
+/*------------------------------------------------ Egy jatek oldala*/
+#Game-C{
+    width: 60em;
+    margin: auto;
+    margin-top: 10em;
+}
+
+#Game-C > div:first-of-type{
+    width: 100%;
+    background: gainsboro;
+}
+
+#Game-C h1, #Game-C h2{
+    margin: 0;
+    padding: 0.5em;
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+}
+
+#Game-C h2{
+    padding-left: 0.25em;
+}
+
+#Game-CategoriesC{
+    width: 2em;
+    background: gainsboro;
+    float: right;
+    margin-right: -2em;
+}
+
+#Game-CategoriesC > img{
+    width: 2em;
+    height: 2em;
+    display: block;
+}
+
+#Game-InfoC{
+    width: 95%;
+    background: whitesmoke;
+    padding: 2.5%;
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+}
+
+#Game-InfoC > div{
+    display: inline-block;
+}
+
+#Game-InfoC > div:first-of-type{
+    width: 55%;
+}
+
+#Game-InfoC > div:first-of-type > img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+#Game-InfoC > div:first-of-type > div{
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+#Game-InfoC > div:first-of-type > div > img{
+    width: 23%;
+    height: 5em;
+}
+
+#Game-InfoC > div:last-of-type{
+    width: 44%;
+    float: right;
+}
+
+#Game-InfoC > div:last-of-type > img{
+    display: block;
+    width: 75%;
+    margin: auto;
+}
+
+#Game-InfoC > div:last-of-type > span{
+    display: block;
+    width: 85%;
+    margin: auto;
+    margin-top: 1em;
+    text-align: justify;
+}
+
+#Game-BuyC, #Game-WriteReviewC, #Game-ReviewsC{
+    width: 55%;
+    background: whitesmoke;
+    margin-top: 2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border-radius: 0.25em;
+}
+
+#Game-BuyC{
+    height: 4em;
+}
+
+#Game-BuyC > div{
+    float: right;
+    margin-top: -0.75em;
+    margin-right: 0.25em;
+}
+
+#Game-BuyC > div > span{
+    width: 3em;
+    display: inline-block;
+    margin-right: 0.25em;
+    padding: 0.85em;
+    text-align: center;
+    background: gainsboro;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.75);
+}
+
+#Game-BuyC > div > form{
+    float: right;
+}
+
+#Game-ToCart{
+    padding: 1em 1.4em;
+    background: darkseagreen;
+    border: 2px solid darkgreen;
+}
+
+#Game-ToCart:hover {
+    box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.75);
+}
+
+#Game-ToFavourite{
+    position: relative;
+    width: 45px;
+    height: 35px;
+
+    text-decoration: none;
+    background: rgb(160, 160, 160);
+    border-radius: 5px;
+    border: 2px solid rgb(117, 71, 44);
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.75);
+    padding: 2em 2em 1.25em 2em;
+    cursor: pointer;
+}
+
+#Game-ToFavourite:before, #Game-ToFavourite:after, #Game-Favourite:before, #Game-Favourite:after{
+    position: absolute;
+    content: "";
+    left: 20px;
+    top: 0;
+    width: 20px;
+    height: 35px;
+    background: dimgray;
+    border-radius: 20px 20px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+}
+
+#Game-ToFavourite:after, #Game-Favourite:after{
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}
+
+#Game-ToFavourite:hover:before, #Game-ToFavourite:hover:after{
+    background: rgb(220, 0, 0);
+}
+
+#Game-Favourite{
+    position: relative;
+    float: right;
+    padding: 1.95em 1.45em 0.75em 1.9em;
+    background: rgb(160, 160, 160);
+    border-radius: 5px;
+    border: 2px solid rgb(117, 71, 44);
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.75);
+}
+
+#Game-Favourite:before, #Game-Favourite:after{
+    background: rgb(220, 0, 0);
+    margin-left: 0.45em;
+    margin-top: 0.25em;
+}
+
+#Game-WriteReviewC{
+    margin-top: 3em;
+    padding-bottom: 0.75em;
+}
+
+#Game-WriteReviewC > span, #Game-WriteReviewC > select{
+    margin-top: 1em;
+}
+
+#Game-WriteReviewC > span{
+    margin-left: 1.5em;
+}
+
+#Game-WriteReviewC > select{
+    margin-left: 0.25em;
+}
+
+#Game-WriteReviewC > textarea{
+    display: block;
+    width: 90%;
+    height: 20em;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 3px;
+    border: 3px solid rgb(117, 71, 44);
+}
+
+#Game-WriteReviewC > textarea:focus{
+    outline: none;
+}
+
+#Game-WriteReviewC > button{
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+}
+
+#Game-ReviewsC{
+    padding-bottom: 0.75em;
+}
+/*------------------------------------------------------*/
+
+/*------------------------------------------------ Browse*/
+#Browse-C{
+    width: 50em;
+    margin: auto;
+    margin-top: 10em;
+    background: gray;
+    border-radius: 0.5em;
+    box-shadow: 0 0 32px 5px rgba(0,0,0,0.75);
+}
+
+#Browse-C > div:first-of-type, #Browse-Mid{
+    width: 100%;
+}
+
+#Browse-C > div:first-of-type{
+    background: gainsboro;
+}
+
+#Browse-C > div:first-of-type > h1{
+    margin: 0;
+    padding: 0.5em;
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+}
+
+#Browse-Mid{
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+/*Ha ures*/
+#Browse-Mid > h3{
+    display: block;
+    margin-left: 40%;
+    padding-bottom: 1em;
+}
+
+#Browse-Mid a{
+    text-decoration: none;
+    color: black;
+}
+
+#Browse-Mid > div{
+    height: 7.365em;
+    background: darkgray;
+    margin-bottom: 0.5em;
+}
+
+#Browse-Mid > div:last-of-type{
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+#Browse-Mid > div > *{
+    display: inline-block;
+}
+
+#Browse-Mid > div > div:first-of-type{
+    float: left;
+}
+
+#Browse-Mid > div > div > a > img{
+    width: 12.5em;
+    padding: 0.8em 0.5em 0.5em 0.8em;
+}
+
+#Browse-Mid > div > div:nth-child(2){
+    width: 12em;
+    font-size: 24px;
+    margin-top: 0.65em;
+}
+
+#Browse-Mid > div > div:nth-child(3){
+    width: 7em;
+    float: right;
+    margin-top: 3.25em;
+    margin-right: 10.25em;
+    font-size: 16px;
+}
+
+#Browse-Mid > div > div:nth-child(3) > span, #Browse-Mid > div > div:last-of-type > span{
+    float: right;
+}
+
+#Browse-Mid > div > div:last-of-type{
+    width: 4em;
+    float: right;
+    margin-top: 2.5em;
+    margin-right: -12.25em;
+    font-size: 20px;
+}
+/*------------------------------------------------------*/
+
+/*------------------------------------------------ Profile*/
+#Profile-C{
+    width: 60em;
+    margin: auto;
+    margin-top: 5em;
+}
+
+#Profile-C h1, #Profile-C h2{
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+}
+
+#Profile-C > div:first-of-type{
+    width: 100%;
+    height: 15em;
+    background: whitesmoke;
+}
+
+#Profile-C > div:first-of-type > img{
+    display: inline-block;
+    width: 12em;
+    height: 12em;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+    float: left;
+}
+
+#Profile-C > div:first-of-type > h1{
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+#Profile-C > div:last-of-type{
+    width: 95%;
+    margin: auto;
+    background: gray;
+    padding-bottom: 1.5em;
+    overflow: auto; /*Nem nyomja le a belso elem marginja az egeszet*/
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    box-shadow: inset 0 0 32px 7px rgba(0,0,0,0.75);
+}
+
+#Profile-C > div:last-of-type > div{
+    width: 60%;
+    margin-top: 1.5em;
+    margin-left: 1.5em;
+}
+
+#Profile-C > div:last-of-type > div > div{
+    background: whitesmoke;
+    border-radius: 0.25em;
+}
+
+#Profile-C > div:last-of-type > div > div > div:first-of-type > h2{
+    margin: 0;
+    padding: 0.5em;
+}
+
+#Profile-FavouritesC{
+    padding-bottom: 1em;
+}
+
+#Profile-FavouritesC > div{
+    width: 100%;
+}
+
+#Profile-FavouritesC > div:last-of-type > div{
+    height: 3.5em;
+    width: 95%;
+    margin-left: 1em;
+    margin-top: 1em;
+    background: gainsboro;
+}
+
+#Profile-FavouritesC > div:last-of-type > div:first-of-type{
+    margin-top: 0;
+}
+
+#Profile-FavouritesC > div:last-of-type > div > *{
+    display: inline-block;
+}
+
+#Profile-FavouritesC > div:last-of-type > div > a{
+    float:left;
+}
+
+#Profile-FavouritesC > div:last-of-type > div > a > img{
+    height: 3.5em;
+}
+
+#Profile-FavouritesC > div:last-of-type > div > span{
+    float: left;
+    margin-top: 1.25em;
+    margin-left: 1em;
+}
+
+#Profile-FavouritesC > div:last-of-type > div > form{
+    float: right;
+    margin-top: 0.95em;
+    margin-right: 0.5em;
+}
+
+#Profile-FavouritesC > div:last-of-type > div > form > button{
+    padding: 0.25em 0.75em
+}
+
+#Profile-PurchasesC{
+    margin-top: 2em;
+    padding-bottom: 1em;
+}
+
+#Profile-PurchasesC > table{
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    line-height: 2em;
+}
+
+#Profile-PurchasesC > table > thead{
+    background-color: gainsboro;
+}
+
+#Profile-PurchasesC > table > thead > tr > th:nth-child(2){
+    min-width: 7.5em;
+}
+
+#Profile-PurchasesC > table > thead > tr > th:last-of-type{
+    min-width: 4em;
+}
+
+#Profile-PurchasesC > table > td, tr {
+    text-align: left;
+    padding: 8px;
+}
+
+#Profile-PurchasesC > table th, tr{
+    border: 1px solid #dddddd;
+}
+
+#Profile-PurchasesC > table tr:nth-child(even) {
+    background-color: gainsboro;
+}
+
+#Profile-ReviewsC{
+    margin-top: 2em;
+    padding-bottom: 1em;
+}
+
+#Profile-ReviewsC > div:last-of-type{
+    width: 95%;
+    margin: auto;
+}
+/*------------------------------------------------------*/
+
+/*------------------------------------------------ Invalid URL*/
+#IURL-C{
+    width: 60em;
+    margin: auto;
+    margin-top: 10em;
+    background: gainsboro;
+    text-align: center;
+    padding: 1em;
+}
+
+#IURL-C >img{
+    display: block;
+    margin: auto;
+}
+/*------------------------------------------------------*/

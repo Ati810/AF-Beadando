@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Cart</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <div><a href="/"><img id="Nav-icon" src="misc/img/icons/hammer.png"></a></div>
+            <div>Smith Games - Hammer</div>
+            <span></span>
+            <button id="Nav-games">Games</button>
+            <div id="Nav-dropDown">
+                <a href="/browse/All">All</a>
+                <a href="/browse/Action">Action</a>
+                <a href="/browse/Adventure">Adventure</a>
+                <a href="/browse/Casual">Casual</a>
+                <a href="/browse/Indie">Indie</a>
+                <a href="/browse/MMO">MMO</a>
+                <a href="/browse/Racing">Racing</a>
+                <a href="/browse/RPG">RPG</a>
+                <a href="/browse/Simulation">Simulation</a>
+                <a href="/browse/Sports">Sports</a>
+                <a href="/browse/Strategy">Strategy</a>
+            </div>
+        </div>
+
+        <div>
+            <a href="/cart"><img src="misc/img/icons/cart.png"></a>
+            <a href="/login" class="Nav-LinkButton">Login</a>
+            <span></span>
+            <a href="/register" class="Nav-LinkButton">Create Account</a>
+        </div>
+    </nav>
+
+    <div id="Cart-C">
+        <div>
+            <h1>Your cart</h1>
+        </div>
+
+        <div id="Cart-Mid">
+            {% if cart.length > 0 %}
+                {% for game in cart %}
+                    <div>
+                        <div>
+                            <a href="/game/{{ game.id }}">
+                                <img src="{{ game.picture }}">
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="/game/{{ game.id }}">{{ game.name }}</a>
+                        </div>
+
+                        <div>
+                            <span>{{ game.price }}€</span>
+                        </div>
+
+                        <form method="post" action="/cart/{{ game.id }}">
+                            <button type="submit" class="Button">X</button>
+                        </form>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <h3>Your cart is empty.</h3>
+            {% endif %}
+        </div>
+
+        <div id="Cart-Out">
+            <span>{{ sum }}€</span>
+            <a href="/login" class="Button">Login</a>
+        </div>
+    </div>
+
+    <footer id="Footer-NoContent">
+      <img src="misc/img/icons/hammer.png">
+      <span>Smith Games</span>
+
+      <span>Copyright © 2016 Smith Games</span>
+    </footer>
+
+    <script type="text/javascript" src="js/forAll.js"></script>
+</body>
+</html>

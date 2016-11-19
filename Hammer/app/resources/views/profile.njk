@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Profile</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <div><a href="/"><img id="Nav-icon" src="misc/img/icons/hammer.png"></a></div>
+            <div>Smith Games - Hammer</div>
+            <span></span>
+            <button id="Nav-games">Games</button>
+            <div id="Nav-dropDown">
+                <a href="/browse/All">All</a>
+                <a href="/browse/Action">Action</a>
+                <a href="/browse/Adventure">Adventure</a>
+                <a href="/browse/Casual">Casual</a>
+                <a href="/browse/Indie">Indie</a>
+                <a href="/browse/MMO">MMO</a>
+                <a href="/browse/Racing">Racing</a>
+                <a href="/browse/RPG">RPG</a>
+                <a href="/browse/Simulation">Simulation</a>
+                <a href="/browse/Sports">Sports</a>
+                <a href="/browse/Strategy">Strategy</a>
+            </div>
+        </div>
+
+        <div>
+            <a href="/cart"><img src="misc/img/icons/cart.png"></a>
+            <a href="/profile" class="Nav-LinkButton">Profile</a>
+            <span></span>
+            <a href="/logout" class="Nav-LinkButton">Logout</a>
+        </div>
+    </nav>
+
+    <div id="Profile-C">
+        <div>
+            <img src="misc/img/pics/placeholder.png">
+            <h1>{{ user.username }}</h1>
+        </div>
+
+        <div>
+            <div>
+                <div id="Profile-FavouritesC">
+                    <div>
+                        <h2>Favourites</h2>
+                    </div>
+
+                    <div>
+                        {% for favourite in favourites %}
+                            <div>
+                                <a href="/game/{{ favourite.id }}">
+                                  <img src="{{ favourite.pictures[0] }}">
+                                </a>
+
+                                <span>{{ favourite.name }}</span>
+
+                                <form action="/profile/r{{ favourite.id }}" method="post">
+                                    <button type="submit" class="Button">Remove</button>
+                                </form>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div id="Profile-PurchasesC">
+                    <div>
+                        <h2>Purchases</h2>
+                    </div>
+
+                    {% if purchases.length > 0 %}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Games</th>
+                                    <th>Date</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for purchase in purchases %}
+                                    <tr>
+                                        <td>
+                                            {% for i in range(0, purchase.names.length) -%}
+                                                {{ purchase.names[i] }}{% if i < purchase.names.length - 1 %}, {% endif %}
+                                            {% endfor %}
+                                        </td>
+                                        <td>{{ purchase.date }}</td>
+                                        <td>{{ purchase.price }}€</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% endif %}
+                </div>
+
+                <div id="Profile-ReviewsC">
+                    <div>
+                        <h2>My reviews</h2>
+                    </div>
+
+                    <div>
+                        {% for review in reviews %}
+                            <div class="ReviewC">
+                                <div>
+                                    {% if review.user.avatar %}
+                                        <img src="{{ review.user.avatar }}">
+                                    {% else %}
+                                        <img src="misc/img/icons/user.png">
+                                    {% endif %}
+
+                                    <span>{{ user.username }}</span>
+                                </div>
+
+                                <div>
+                                    <div>
+                                        <span>{{ review.date }}</span>
+                                        <div>
+                                            {% for i in range(0, 5 - review.rating) %}
+                                                <img src="misc/img/icons/hammerEmpty.png">
+                                            {% endfor %}
+                                            {% for i in range(0, review.rating) %}
+                                                <img src="misc/img/icons/hammer.png">
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <span><i>{{ review.gameName }}</i></span>
+                                        <br>
+                                        <br>
+                                        <span>{{ review.text }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <img src="misc/img/icons/hammer.png">
+      <span>Smith Games</span>
+
+      <span>Copyright © 2016 Smith Games</span>
+    </footer>
+
+    <script type="text/javascript" src="js/forAll.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <div><a href="/"><img id="Nav-icon" src="misc/img/icons/hammer.png"></a></div>
+            <div>Smith Games - Hammer</div>
+            <span></span>
+            <button id="Nav-games">Games</button>
+            <div id="Nav-dropDown">
+                <a href="/browse/All">All</a>
+                <a href="/browse/Action">Action</a>
+                <a href="/browse/Adventure">Adventure</a>
+                <a href="/browse/Casual">Casual</a>
+                <a href="/browse/Indie">Indie</a>
+                <a href="/browse/MMO">MMO</a>
+                <a href="/browse/Racing">Racing</a>
+                <a href="/browse/RPG">RPG</a>
+                <a href="/browse/Simulation">Simulation</a>
+                <a href="/browse/Sports">Sports</a>
+                <a href="/browse/Strategy">Strategy</a>
+            </div>
+        </div>
+
+        <div>
+            <a href="/cart"><img src="misc/img/icons/cart.png"></a>
+            <a href="/login" class="Nav-LinkButton">Login</a>
+            <span></span>
+            <a href="/register" class="Nav-LinkButton">Create Account</a>
+        </div>
+    </nav>
+
+    <div id="Login-C">
+        <form method="post">
+            <h1>Login</h1>
+
+            {% if invalid %}
+                <div id="Login-EText">Invalid login data!</div>
+            {% elif old("successful") %}
+                <div id="Login-PText">Successful registration!</div>
+            {% endif %}
+
+            <label for="Login-Email">Email</label>
+            <input type="email" name="email" id="Login-Email" required>
+            <label for="Login-Password">Password</label>
+            <input type="password" name="password" id="Login-Password" required>
+
+            <button type="submit" class="Button">Login</button>
+        </form>
+
+        <span></span>
+
+        <div>
+            <h1>Create an account</h1>
+
+            <span>
+                Curabitur sed nulla molestie, eleifend lectus sit amet, pulvinar odio. Fusce molestie sit amet diam quis varius.
+                Mauris mi arcu, egestas ac elit pellentesque, ultrices sodales mauris. Mauris ac laoreet erat. Fusce sed mattis dolor,
+                in luctus turpis. Aliquam vitae blandit nisi. Aenean vulputate purus eget neque auctor iaculis. Maecenas porta imperdiet odio eget interdum.
+            </span>
+
+            <a href="register">Create an account</a>
+        </div>
+    </div>
+
+    <footer id="Footer-NoContent">
+      <img src="misc/img/icons/hammer.png">
+      <span>Smith Games</span>
+
+      <span>Copyright © 2016 Smith Games</span>
+    </footer>
+
+    <script type="text/javascript" src="js/forAll.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../style.css">
+    <title>{{ game.name }}</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <div><a href="/"><img id="Nav-icon" src="../misc/img/icons/hammer.png"></a></div>
+            <div>Smith Games - Hammer</div>
+            <span></span>
+            <button id="Nav-games">Games</button>
+            <div id="Nav-dropDown">
+                <a href="/browse/All">All</a>
+                <a href="/browse/Action">Action</a>
+                <a href="/browse/Adventure">Adventure</a>
+                <a href="/browse/Casual">Casual</a>
+                <a href="/browse/Indie">Indie</a>
+                <a href="/browse/MMO">MMO</a>
+                <a href="/browse/Racing">Racing</a>
+                <a href="/browse/RPG">RPG</a>
+                <a href="/browse/Simulation">Simulation</a>
+                <a href="/browse/Sports">Sports</a>
+                <a href="/browse/Strategy">Strategy</a>
+            </div>
+        </div>
+
+        <div>
+            <a href="/cart"><img src="../misc/img/icons/cart.png"></a>
+            <a href="/login" class="Nav-LinkButton">Login</a>
+            <span></span>
+            <a href="/register" class="Nav-LinkButton">Create Account</a>
+        </div>
+    </nav>
+
+    <div id="Game-C">
+        <div>
+            <h1>{{ game.name }}</h1>
+        </div>
+
+        <div id="Game-CategoriesC">
+          {% for category in game.categories %}
+              <img src="../misc/img/icons/{{ category }}.png" title="{{ category }}">
+          {% endfor %}
+        </div>
+
+        <div id="Game-InfoC">
+            <div>
+                <img src="{{ game.pictures[1] }}">
+
+                <div>
+                    <img src="{{ game.pictures[2] }}">
+                    <img src="{{ game.pictures[3] }}">
+                    <img src="{{ game.pictures[4] }}">
+                    <img src="{{ game.pictures[5] }}">
+                </div>
+            </div>
+
+            <div>
+                <img src="{{ game.pictures[0] }}">
+
+                <span>
+                    {{ game.description }}
+                </span>
+            </div>
+        </div>
+
+        <div id="Game-BuyC">
+            <h2>{{ game.name }}</h2>
+
+            <div>
+                <span>
+                    {% if game.price > 0 %}
+                        {{ game.price }}€
+                    {% else %}
+                        Free
+                    {% endif %}
+                </span>
+
+                {% if not game.inCart %}
+                    <form method="post" action="/game/{{ game.id }}/a">
+                        <button type="submit" class="Button" id="Game-ToCart">Add to cart</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+
+        <div id="Game-ReviewsC">
+            <div>
+                <h2>Reviews</h2>
+            </div>
+
+            <div>
+                {% for review in game.reviews %}
+                    <div class="ReviewC">
+                        <div>
+                            {% if review.user.avatar %}
+                              <img src="{{ review.user.avatar }}">
+                            {% else %}
+                              <img src="../misc/img/icons/user.png">
+                            {% endif %}
+                            <span>{{ review.user.username }}</span>
+                        </div>
+
+                        <div>
+                            <div>
+                                <span>{{ review.date }}</span>
+                                <div>
+                                    {% for i in range(0, 5 - review.rating) %}
+                                      <img src="../misc/img/icons/hammerEmpty.png">
+                                    {% endfor %}
+                                    {% for i in range(0, review.rating) %}
+                                      <img src="../misc/img/icons/hammer.png">
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="Review-WithoutName">{{ review.text }}</span>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <img src="misc/img/icons/hammer.png">
+      <span>Smith Games</span>
+
+      <span>Copyright © 2016 Smith Games</span>
+    </footer>
+
+    <script type="text/javascript" src="../js/forAll.js"></script>
+</body>
+</html>

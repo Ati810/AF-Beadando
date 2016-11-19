@@ -122,23 +122,18 @@ Vegyünk példának egy egyszerű folyamatot:
 - GET/cart - Kosarunk megtekintése
 - POST/cart - Kosárba helyezett játékok megvásárlása
 - POST/cart/:id - Játék eltávolítása a kosárból
-
 - GET/browse/:category/:page? - Játékok listája
 - GET/game/:id - Játék adatlapja
 - POST/game/:id/f - Játék kedvencekhez adása
 - POST/game/:id/r - Új értékelés elküldése
 - POST/game/:id/a - Játék kosárba helyezése
-
 - GET/profile - Felhasználó adatlapja
 - POST/profile/:action - A felhasználó adatlapjához tartozó műveletek elvégzése (pl. játék eltávolítása a kedvencek közül)
-
 - GET/login - Ha be vagyunk lépve, akkor a profilra, különben a beléptető oldara küld
 - POST/login - Bejelentkezési adatok elküldése
 - GET/logout - Ha be vagyunk lépve, akkor kiléptet, különben visszaküld az előző oldalra
-
 - GET/register - Regisztrációs oldal
 - POST/register - Regisztrációs adatok elküldése
-
 - /* - Bármilyen érvénytelen URL esetén egy "Nem létező URL" oldalra küld
 
 #### 2.2 Felhasználói-felület modell

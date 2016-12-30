@@ -118,20 +118,23 @@ Vegyünk példának egy egyszerű folyamatot:
 - Kosár
 
 ###### 2.1.3 Végpontok
-- GET/: Főoldal
-- GET/login: Bejelentkező oldal
-- POST/login: Bejelentkezési adatok elküldése
-- GET/login/signup: Regisztrációs oldal
-- POST/login/signup: Regisztrációs adatok elküldése
-- GET/logout: Kijelentkező oldal
-- GET/games/list: Játékok listája
-- GET/games/id: Játék adatlapja
-- POST/games/id: Új hozzászólás elküldése
-- GET/users/id: Felhasználó adatlapja
-- POST/users/favourites/id: Játék kedvencekhez adása
-- POST/users/purchases/new: Vásárlási adatok elküldése
-- GET/basket: Kosarunk megtekintése
-- POST/basket/id: Játék kosárba helyezése
+- GET/ - Főoldal
+- GET/cart - Kosarunk megtekintése
+- POST/cart - Kosárba helyezett játékok megvásárlása
+- POST/cart/:id - Játék eltávolítása a kosárból
+- GET/browse/:category/:page? - Játékok listája
+- GET/game/:id - Játék adatlapja
+- POST/game/:id/f - Játék kedvencekhez adása
+- POST/game/:id/r - Új értékelés elküldése
+- POST/game/:id/a - Játék kosárba helyezése
+- GET/profile - Felhasználó adatlapja
+- POST/profile/:action - A felhasználó adatlapjához tartozó műveletek elvégzése (pl. játék eltávolítása a kedvencek közül)
+- GET/login - Ha be vagyunk lépve, akkor a profilra, különben a beléptető oldara küld
+- POST/login - Bejelentkezési adatok elküldése
+- GET/logout - Ha be vagyunk lépve, akkor kiléptet, különben visszaküld az előző oldalra
+- GET/register - Regisztrációs oldal
+- POST/register - Regisztrációs adatok elküldése
+- /* - Bármilyen érvénytelen URL esetén egy "Nem létező URL" oldalra küld
 
 #### 2.2 Felhasználói-felület modell
 

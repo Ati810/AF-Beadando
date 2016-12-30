@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="../style.css">
+    <link type="text/css" rel="stylesheet" href="/style.css">
     <title>Browse</title>
 </head>
 <body>
     <nav>
         <div>
-            <div><a href="/"><img id="Nav-icon" src="../misc/img/icons/hammer.png"></a></div>
+            <div><a href="/"><img id="Nav-icon" src="/misc/img/icons/hammer.png"></a></div>
             <div>Smith Games - Hammer</div>
             <span></span>
             <button id="Nav-games">Games</button>
@@ -28,7 +28,7 @@
         </div>
 
         <div>
-            <a href="/cart"><img src="../misc/img/icons/cart.png"></a>
+            <a href="/cart"><img src="/misc/img/icons/cart.png"></a>
             <a href="/login" class="Nav-LinkButton">Login</a>
             <span></span>
             <a href="/register" class="Nav-LinkButton">Create Account</a>
@@ -40,26 +40,39 @@
             <h1>Browse</h1>
         </div>
 
+        <div id="Browse-Search">
+            <div>
+                <h3>Search</h3>
+            </div>
+
+            <div>
+                <input type="text" name="search" id="Browse-SField">
+                <img src="/misc/img/icons/search.png">
+            </div>
+
+            <div id="Browse-SResults"></div>
+        </div>
+
         <div id="Browse-Mid">
             {% if games.length > 0 %}
               {% for game in games %}
                 <div>
                   <div>
-                    <a href="/game/{{ game.id }}">
-                      <img src={{ game.pictures[0] }}>
+                    <a href="/game/{{ game.id }}" class="Browse-ImgLinks">
+                      <img src="{{ game.pictures[0] }}" class="Browse-Imgs">
                     </a>
                   </div>
 
                   <div>
-                    <a href="/game/{{ game.id }}">{{ game.name }}</a>
+                    <a href="/game/{{ game.id }}" class="Browse-Names">{{ game.name }}</a>
                   </div>
 
                   <div>
-                    <span>{{ game.releasedate }}</span>
+                    <span class="Browse-Dates">{{ game.releasedate }}</span>
                   </div>
 
                   <div>
-                    <span>{{ game.price }}€</span>
+                    <span class="Browse-Prices">{{ game.price }}€</span>
                   </div>
                 </div>
               {% endfor %}
@@ -67,15 +80,30 @@
                 <h3>No games found!</h3>
             {% endif %}
         </div>
+
+        <div id="Browse-PagesC">
+            <button type="button" id="Browse-PLeft" class="Button"><</button>
+            <div>
+                {% if numOfGames > 0 %}
+                    <span id="Browse-PSelected" class="Browse-Pages" data-page="1">1</span>
+
+                    {% for i in range(2, numOfGames + 1) %}
+                        <span class="Browse-Pages" data-page="{{ i }}">{{ i }}</span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <button type="button" id="Browse-PRight" class="Button">></button>
+        </div>
     </div>
 
     <footer {% if games.length < 5 %} id="Footer-NoContent" {% endif %}>
-      <img src="../misc/img/icons/hammer.png">
+      <img src="/misc/img/icons/hammer.png">
       <span>Smith Games</span>
 
       <span>Copyright © 2016 Smith Games</span>
     </footer>
 
-    <script type="text/javascript" src="../js/forAll.js"></script>
+    <script type="text/javascript" src="/js/forAll.js"></script>
+    <script type="text/javascript" src="/js/browse.js"></script>
 </body>
 </html>

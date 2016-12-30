@@ -1,5 +1,4 @@
 document.getElementById("Register-C").addEventListener("focusin", function(event){
-    console.log("Be");
     if(event.target.id){
         var parts = event.target.id.split("-"),
             element = parts.length > 1 ? parts[1] + "Info" : null;
@@ -17,7 +16,6 @@ document.getElementById("Register-C").addEventListener("focusin", function(event
 });
 
 document.getElementById("Register-C").addEventListener("focusout", function(event){
-    console.log("Ki");
     if(event.target.id){
         var parts = event.target.id.split("-"),
             element = parts.length > 1 ? parts[1] + "Info" : null;

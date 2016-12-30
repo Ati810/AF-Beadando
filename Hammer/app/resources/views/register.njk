@@ -40,7 +40,7 @@
             <h1>Create an account</h1>
             {% if old('errors') %}
                 <label for="Register-UN">Username</label>
-                <input type="text" name="username" id="Register-UN" {% if old('errors').username.error %} class="Register-Error" {% endif %} value="{{ old('errors').username.value }}" required>
+                <input type="text" name="username" id="Register-UN" {% if old('errors').username.error %} class="Register-Error" {% endif %} value="{{ old('errors').username.value }}" minlength="3" maxlength="80" required>
                 <small id="Register-UNInfo" class="Register-Info">Min: 3, Max: 80 characters</small>
 
                 <label for="Register-E">Email</label>
@@ -48,22 +48,22 @@
                 <small id="Register-EInfo" class="Register-Info">Use an e-mail that is not yet registered</small>
 
                 <label for="Register-FN">First name</label>
-                <input type="text" name="firstname" id="Register-FN" {% if old('errors').firstname.error %} class="Register-Error" {% endif %} value="{{ old('errors').firstname.value }}" required>
+                <input type="text" name="firstname" id="Register-FN" {% if old('errors').firstname.error %} class="Register-Error" {% endif %} value="{{ old('errors').firstname.value }}" minlength="3" maxlength="80" required>
                 <small id="Register-FNInfo" class="Register-Info">Min: 3, Max: 80 characters</small>
 
                 <label for="Register-LN">Last name</label>
-                <input type="text" name="lastname" id="Register-LN" {% if old('errors').lastname.error %} class="Register-Error" {% endif %} value="{{ old('errors').lastname.value }}" required>
+                <input type="text" name="lastname" id="Register-LN" {% if old('errors').lastname.error %} class="Register-Error" {% endif %} value="{{ old('errors').lastname.value }}" minlength="3" maxlength="80" required>
                 <small id="Register-LNInfo" class="Register-Info">Min: 3, Max: 80 characters</small>
 
                 <label for="Register-P">Password</label>
-                <input type="password" name="password" id="Register-P" {% if old('errors').password.error %} class="Register-Error" {% endif %} required>
+                <input type="password" name="password" id="Register-P" {% if old('errors').password.error %} class="Register-Error" {% endif %} minlength="6" maxlength="60" required>
                 <small id="Register-PInfo" class="Register-Info">Min: 6, Max: 60 characters</small>
 
                 <label for="Register-PA">Password again</label>
                 <input type="password" name="passwordagain" id="Register-PA" {% if old('errors').passwordagain.error %} class="Register-Error" {% endif %} required>
             {% else %}
                 <label for="Register-UN">Username</label>
-                <input type="text" name="username" id="Register-UN" required>
+                <input type="text" name="username" id="Register-UN" minlength="3" maxlength="80" required>
                 <small id="Register-UNInfo" class="Register-Info">Min: 3, Max: 80 characters</small>
 
                 <label for="Register-E">Email</label>
@@ -71,15 +71,15 @@
                 <small id="Register-EInfo" class="Register-Info">Use an e-mail that is not yet registered</small>
 
                 <label for="Register-FN">First name</label>
-                <input type="text" name="firstname" id="Register-FN" required>
+                <input type="text" name="firstname" id="Register-FN" minlength="3" maxlength="80" required>
                 <small id="Register-FNInfo" class="Register-Info">Min: 3, Max: 80 characters</small>
 
                 <label for="Register-LN">Last name</label>
-                <input type="text" name="lastname" id="Register-LN" required>
+                <input type="text" name="lastname" id="Register-LN" minlength="3" maxlength="80" required>
                 <small id="Register-LNInfo" class="Register-Info">Min: 3, Max: 80 characters</small>
 
                 <label for="Register-P">Password</label>
-                <input type="password" name="password" id="Register-P" required>
+                <input type="password" name="password" id="Register-P" minlength="6" maxlength="60" required>
                 <small id="Register-PInfo" class="Register-Info">Min: 6, Max: 60 characters</small>
 
                 <label for="Register-PA">Password again</label>

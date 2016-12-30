@@ -18,11 +18,13 @@
 const Route = use('Route');
 
 Route.get("/", "ContentController.main");
+Route.get("/mainGames", "ContentController.mainGames");
+
 Route.get("/cart", "UserController.getCart");
 Route.post("/cart/:id", "UserController.removeFromCart");
 Route.post("/cart", "UserController.buyGames");
 
-Route.get("/browse/:category/:page?", "ContentController.browse");
+Route.get("/browse/:category", "ContentController.browse"); /*/:page?*/
 Route.get("/game/:id", "ContentController.game");
 Route.post("/game/:id/f", "UserController.gameToFavourite");
 Route.post("/game/:id/r", "UserController.newReview");
@@ -37,6 +39,12 @@ Route.get("/logout", "UserController.logout");
 
 Route.get("/register", "UserController.getRegister");
 Route.post("/register", "UserController.register");
+
+Route.group("ajax", function(){
+    Route.get("/", "ContentController.mainAjax");
+    Route.post("/browse/:category", "ContentController.browseAjax");
+    Route.post("/search/browse/:category", "ContentController.browseSearchAjax");
+}).prefix("/ajax");
 
 //Ervenytelen URL eseten
 Route.any("*", function * (request, response) {

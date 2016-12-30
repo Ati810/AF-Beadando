@@ -247,6 +247,12 @@ nav div:last-of-type > a > img{
     margin-top: 1em!important;
 }
 
+.Review-HiddenText{
+    height: 15.25em;
+    overflow: hidden;
+    cursor: pointer;
+}
+
 /*--------------------------- Lábléc*/
 footer{
     width: 100%;
@@ -309,7 +315,7 @@ footer > span{
     box-shadow: 0 0 32px 5px rgba(0,0,0,0.75);
 }
 
-#Main-MidC > div{
+#Main-MidC > div:nth-child(2){
     display: inline-block;
     width: 89.475%;
     height: 90%;
@@ -320,11 +326,24 @@ footer > span{
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.75);
 }
 
+#Main-MidC > div:nth-child(2) > a > img{
+    display: block;
+    width: 95%;
+    height: 92.5%;
+    margin: auto;
+    margin-top: 1em;
+    box-shadow: inset 0 0 16px 10px rgba(0,0,0,0.75);
+    border-radius: 0.25em;
+    position: relative;
+    cursor: pointer;
+}
+
 .Main-MidArrows{
     display: inline-block;
     width: 3em;
     height: 3em;
     margin-top: 13em;
+    cursor: pointer;
 }
 
 #Main-MidLeft{
@@ -925,6 +944,110 @@ footer > span{
     text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
 }
 
+#Browse-Search{
+    width: 14em;
+    float: right;
+    background: grey;
+    margin-right: -15em;
+    padding: 0 0.5em 0 0.5em;
+    border-radius: 0 0.5em 0.5em 0;
+}
+
+#Browse-Search > div:first-of-type{
+    width: 15em;
+    border-top-right-radius: 0.5em;
+    background: gainsboro;
+    margin-left: -0.5em;
+    margin-top: 0;
+}
+
+#Browse-Search > div:first-of-type > h3{
+    margin: 0;
+    padding: 0.25em;
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
+}
+
+#Browse-Search > div{
+    width: 100%;
+    margin: auto;
+}
+
+#Browse-Search > div:nth-child(2){
+    position: relative;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+}
+
+#Browse-Search > div:nth-child(2) > *{
+    display: inline-block;
+}
+
+#Browse-Search > div:nth-child(2) > input{
+    margin-left: 8%;
+    z-index: -5;
+}
+
+#Browse-Search > div:nth-child(2) > img{
+    height: 1.2em;
+    margin-left: -1%;
+    margin-top: 0.075%;
+    z-index: 1000;
+    position: absolute;
+    background: white;
+}
+
+#Browse-SResults > div{
+    width: 100%;
+    height: 4em;
+    background: darkgray;
+    margin-bottom: 0.5em;
+    border-radius: 0.2em;
+}
+
+#Browse-SResults > div img{
+    width: 7em;
+    margin-top: 0.35em;
+    margin-left: 0.35em;
+}
+
+#Browse-SResults > div > a > div{
+    display: inline-block;
+}
+
+#Browse-SResults > div > a > div:last-of-type{
+    width: 6em;
+    height: 3.25em;
+    float: right;
+    margin-top: 0.35em;
+    margin-right: 0.35em;
+    position: relative;
+}
+
+#Browse-SResults > div > a > div:last-of-type > span{
+    width: 100%;
+    font-size: 12px;
+    color: black;
+    display: block;
+    text-decoration: none;
+
+}
+
+.Browse-SNames{
+    margin-top: 0.25em;
+    height: 2.5em;
+    overflow: hidden;
+}
+
+.Browse-SPrices{
+    position: absolute;
+    bottom: 0.25em;
+}
+
+#Browse-SField{
+    display: block;
+    margin: auto;
+}
+
 #Browse-Mid{
     border-bottom-left-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
@@ -990,6 +1113,51 @@ footer > span{
     margin-top: 2.5em;
     margin-right: -12.25em;
     font-size: 20px;
+}
+
+#Browse-PagesC{
+    width: 17.5em;
+    height: 2.5em;
+    margin: auto;
+    text-align: center;
+    background: darkgray;
+    border: 3px solid rgb(117, 71, 44);
+    border-radius: 0.25em;
+    padding: 0 0.75em 0 0.75em;
+}
+
+#Browse-PagesC > *{
+    display: inline-block;
+    margin-top: 0.75em;
+}
+
+#Browse-PagesC > button{
+    padding: 0.25em 0.75em;
+    margin-top: 0.5em;
+    background: gainsboro!important;
+}
+
+#Browse-PagesC > button:hover{
+    background: gainsboro!important;
+}
+
+#Browse-PLeft{
+    float: left;
+}
+
+#Browse-PRight{
+    float: right;
+}
+
+.Browse-Pages{
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+#Browse-PSelected{
+    color: rgb(117, 71, 44);
+    cursor: default;
+    text-decoration: underline;
 }
 /*------------------------------------------------------*/
 
@@ -1152,7 +1320,7 @@ footer > span{
     width: 60em;
     margin: auto;
     margin-top: 10em;
-    background: gainsboro;
+
     text-align: center;
     padding: 1em;
 }
@@ -1160,5 +1328,9 @@ footer > span{
 #IURL-C >img{
     display: block;
     margin: auto;
+}
+
+#IURL-C > h1{
+    color: gainsboro;
 }
 /*------------------------------------------------------*/

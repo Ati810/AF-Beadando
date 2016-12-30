@@ -37,7 +37,11 @@
 
     <div id="Profile-C">
         <div>
-            <img src="misc/img/pics/placeholder.png">
+            {% if review.user.avatar %}
+              <img src="{{ review.user.avatar }}">
+            {% else %}
+              <img src="misc/img/icons/userBig.png">
+            {% endif %}
             <h1>{{ user.username }}</h1>
         </div>
 
@@ -131,7 +135,7 @@
                                         <span><i>{{ review.gameName }}</i></span>
                                         <br>
                                         <br>
-                                        <span>{{ review.text }}</span>
+                                        <span {%  if review.text.length > 550 %} class="Review-HiddenText" title="Click to see the full review..." {% endif %}>{{ review.text }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -150,5 +154,6 @@
     </footer>
 
     <script type="text/javascript" src="js/forAll.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="Login test.html">Login test</a></td></tr>
+<tr><td><a href="Not owned test.html">Not owned test</a></td></tr>
+<tr><td><a href="Add to cart test.html">Add to cart test</a></td></tr>
+<tr><td><a href="Remove from cart test.html">Remove from cart test</a></td></tr>
+<tr><td><a href="Owned test.html">Owned test</a></td></tr>
+<tr><td><a href="Not my favourite test.html">Not my favourite test</a></td></tr>
+<tr><td><a href="To my favourites test.html">To my favourites test</a></td></tr>
+<tr><td><a href="Remove from favourites test.html">Remove from favourites test</a></td></tr>
+<tr><td><a href="Logout test.html">Logout test</a></td></tr>
+</tbody></table>
+</body>
+</html>

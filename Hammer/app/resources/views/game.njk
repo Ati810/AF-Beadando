@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="../style.css">
+    <link type="text/css" rel="stylesheet" href="/style.css">
     <title>{{ game.name }}</title>
 </head>
 <body>
     <nav>
         <div>
-            <div><a href="/"><img id="Nav-icon" src="../misc/img/icons/hammer.png"></a></div>
+            <div><a href="/"><img id="Nav-icon" src="/misc/img/icons/hammer.png"></a></div>
             <div>Smith Games - Hammer</div>
             <span></span>
             <button id="Nav-games">Games</button>
@@ -28,7 +28,7 @@
         </div>
 
         <div>
-            <a href="/cart"><img src="../misc/img/icons/cart.png"></a>
+            <a href="/cart"><img src="/misc/img/icons/cart.png"></a>
             <a href="/login" class="Nav-LinkButton">Login</a>
             <span></span>
             <a href="/register" class="Nav-LinkButton">Create Account</a>
@@ -42,19 +42,19 @@
 
         <div id="Game-CategoriesC">
           {% for category in game.categories %}
-              <img src="../misc/img/icons/{{ category }}.png" title="{{ category }}">
+              <img src="/misc/img/icons/{{ category }}.png" title="{{ category }}">
           {% endfor %}
         </div>
 
         <div id="Game-InfoC">
             <div>
-                <img src="{{ game.pictures[1] }}">
+                <img src="{{ game.pictures[1] }}" id="Game-MainImg">
 
-                <div>
-                    <img src="{{ game.pictures[2] }}">
-                    <img src="{{ game.pictures[3] }}">
-                    <img src="{{ game.pictures[4] }}">
-                    <img src="{{ game.pictures[5] }}">
+                <div id="Game-ImgsC">
+                    <img src="{{ game.pictures[1] }}" class="Game-Imgs">
+                    <img src="{{ game.pictures[2] }}" class="Game-Imgs">
+                    <img src="{{ game.pictures[3] }}" class="Game-Imgs">
+                    <img src="{{ game.pictures[4] }}" class="Game-Imgs">
                 </div>
             </div>
 
@@ -99,7 +99,7 @@
                             {% if review.user.avatar %}
                               <img src="{{ review.user.avatar }}">
                             {% else %}
-                              <img src="../misc/img/icons/user.png">
+                              <img src="/misc/img/icons/user.png">
                             {% endif %}
                             <span>{{ review.user.username }}</span>
                         </div>
@@ -109,16 +109,16 @@
                                 <span>{{ review.date }}</span>
                                 <div>
                                     {% for i in range(0, 5 - review.rating) %}
-                                      <img src="../misc/img/icons/hammerEmpty.png">
+                                      <img src="/misc/img/icons/hammerEmpty.png">
                                     {% endfor %}
                                     {% for i in range(0, review.rating) %}
-                                      <img src="../misc/img/icons/hammer.png">
+                                      <img src="/misc/img/icons/hammer.png">
                                     {% endfor %}
                                 </div>
                             </div>
 
                             <div>
-                                <span class="Review-WithoutName">{{ review.text }}</span>
+                                <span {%  if review.text.length > 550 %} class="Review-WithoutName Review-HiddenText" title="Click to see the full review..." {% else %} class="Review-WithoutName" {% endif %}>{{ review.text }}</span>
                             </div>
                         </div>
                     </div>
@@ -128,12 +128,13 @@
     </div>
 
     <footer>
-      <img src="misc/img/icons/hammer.png">
+      <img src="../misc/img/icons/hammer.png">
       <span>Smith Games</span>
 
       <span>Copyright © 2016 Smith Games</span>
     </footer>
 
-    <script type="text/javascript" src="../js/forAll.js"></script>
+    <script type="text/javascript" src="/js/forAll.js"></script>
+    <script type="text/javascript" src="/js/game.js"></script>
 </body>
 </html>

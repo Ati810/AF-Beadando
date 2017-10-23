@@ -74,7 +74,7 @@ A program célja egy olyan, főként játékosoknak szánt alkalmazás biztosít
   - Játékok törlése a kedvencek közül
 - Megvásárolt játékok értékelése
 
-![Eset diagram](docs/images/Smith Games - Hammer eset diagram.png "Eset diagram")
+![Eset diagram](docs/images/Smith%20Games%20-%20Hammer%20eset%20diagram.png "Eset diagram")
 
 Vegyünk példának egy egyszerű folyamatot:
 
@@ -84,7 +84,7 @@ Vegyünk példának egy egyszerű folyamatot:
   3. A megvásárolni kívánt játékokat a kosárba helyezhetjük, s folytathatjuk a böngészést, vagy továbbléphetünk a fizetéshez.
   4. A játékok kifizetése után azok bekerülnek a saját játékaink közé.
   
-![Folyamat leíró eset diagram](docs/images/Smith Games - Hammer folyamat leíró eset diagram.png "Folyamat leíró eset diagram")
+![Folyamat leíró eset diagram](docs/images/Smith%20Games%20-%20Hammer%20folyamat%20leíró%20eset%20diagram.png "Folyamat leíró eset diagram")
 
 
 
@@ -93,7 +93,7 @@ Vegyünk példának egy egyszerű folyamatot:
 #### 2.1 Architektúra terv
 
 ###### 2.1.1 Komponens diagram
-![Komponens diagram](docs/images/Smith Games - Hammer komponens diagram.png "Komponens diagram")
+![Komponens diagram](docs/images/Smith%20Games%20-%20Hammer%20komponens%20diagram.png "Komponens diagram")
 
 ###### 2.1.2 Oldaltérkép
 **Publikus**:
@@ -140,63 +140,63 @@ Vegyünk példának egy egyszerű folyamatot:
 
 ###### 2.2.1 Oldalvázlatok
 **Főoldal**
-![Főoldal](docs/images/Smith Games - Hammer Main page.png "Főoldal")
+![Főoldal](docs/images/Smith%20Games%20-%20Hammer%20Main%20page.png "Főoldal")
 
 **Játékok listája**
-![Játékok listája](docs/images/Smith Games - Hammer Games page.png "Játékok listája")
+![Játékok listája](docs/images/Smith%20Games%20-%20Hammer%20Games%20page.png "Játékok listája")
 
 **Játék adatlapja**
-![Játék adatlapja](docs/images/Smith Games - Hammer Game profile.png "Játék adatlapja")
+![Játék adatlapja](docs/images/Smith%20Games%20-%20Hammer%20Game%20profile.png "Játék adatlapja")
 
 **Felhasználó adatlapja**
-![Felhasználó adatlapja](docs/images/Smith Games - Hammer User profile.png "Felhasználó adatlapja")
+![Felhasználó adatlapja](docs/images/Smith%20Games%20-%20Hammer%20User%20profile.png "Felhasználó adatlapja")
 
 **Kosár**
-![Kosár](docs/images/Smith Games - Hammer Basket page.png "Kosár")
+![Kosár](docs/images/Smith%20Games%20-%20Hammer%20Basket%20page.png "Kosár")
 
 **Bejelentkezés**
-![Bejelentkezés](docs/images/Smith Games - Hammer Login page.png "Bejelentkezés")
+![Bejelentkezés](docs/images/Smith%20Games%20-%20Hammer%20Login%20page.png "Bejelentkezés")
 
 **Regisztráció**
-![Regisztráció](docs/images/Smith Games - Hammer Create account page.png "Regisztráció")
+![Regisztráció](docs/images/Smith%20Games%20-%20Hammer%20Create%20account%20page.png "Regisztráció")
 
 ###### 2.2.2 Designtervek (végső megvalósítás megjelenése)
 **Főoldal**
-![Főoldal](docs/images/Smith Games - Hammer Main page final.png "Főoldal")
+![Főoldal](docs/images/Smith%20Games%20-%20Hammer%20Main%20page%20final.png "Főoldal")
 
 **Játékok listája**
-![Játékok listája](docs/images/Smith Games - Hammer Games page final.png "Játékok listája")
+![Játékok listája](docs/images/Smith%20Games%20-%20Hammer%20Games%20page%20final.png "Játékok listája")
 
 **Játék adatlapja**
-![Játék adatlapja](docs/images/Smith Games - Hammer Game profile final.png "Játék adatlapja")
+![Játék adatlapja](docs/images/Smith%20Games%20-%20Hammer%20Game%20profile%20final.png "Játék adatlapja")
 
 **Felhasználó adatlapja**
-![Felhasználó adatlapja](docs/images/Smith Games - Hammer User profile final.png "Felhasználó adatlapja")
+![Felhasználó adatlapja](docs/images/Smith%20Games%20-%20Hammer%20User%20profile%20final.png "Felhasználó adatlapja")
 
 **Kosár**
-![Kosár](docs/images/Smith Games - Hammer Basket page final.png "Kosár")
+![Kosár](docs/images/Smith%20Games%20-%20Hammer%20Basket%20page%20final.png "Kosár")
 
 **Bejelentkezés**
-![Bejelentkezés](docs/images/Smith Games - Hammer Login page final.png "Bejelentkezés")
+![Bejelentkezés](docs/images/Smith%20Games%20-%20Hammer%20Login%20page%20final.png "Bejelentkezés")
 
 **Regisztráció**
-![Regisztráció](docs/images/Smith Games - Hammer Create account page final.png "Regisztráció")
+![Regisztráció](docs/images/Smith%20Games%20-%20Hammer%20Create%20account%20page%20final.png "Regisztráció")
 
 ###### 2.2.3 Osztálymodell
 
 **Adatmodell**
 
-![Adatmodell](docs/images/Smith Games - Hammer adatmodell.png "Adatmodell")
+![Adatmodell](docs/images/Smith%20Games%20-%20Hammer%20adatmodell.png "Adatmodell")
 
 **Adatbázisterv**
 
-![Adatbázisterv](docs/images/Smith Games - Hammer adatbázisterv.png "Adatbázisterv")
+![Adatbázisterv](docs/images/Smith%20Games%20-%20Hammer%20adatbázisterv.png "Adatbázisterv")
 
 ###### 2.2.4 Dinamikus működés
 **Szekvencia diagram**
 
 Az alábbi diagram a regisztráció, bejelentkezés, s egy játék vásárlásának folyamatát mutatja be.
-![Szekvencia diagram](docs/images/Smith Games - Hammer szekvencia diagram.png "Szekvencia diagram")
+![Szekvencia diagram](docs/images/Smith%20Games%20-%20Hammer%20szekvencia%20diagram.png "Szekvencia diagram")
 
 
 
